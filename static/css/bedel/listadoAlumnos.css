@@ -1,0 +1,82 @@
+.listAlum {
+    display: flex;
+    flex-direction: column;
+}
+.listAlum h2{
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.tabla-info {
+    width: 90%;
+}
+#searchInput {
+    border: none;
+    outline: none;
+    width: 100%;
+    margin-bottom: 20px;
+}
+#searchInput:focus {
+    border-bottom: 2px solid #4575b6;
+}
+.tableList {
+    width: 100%;
+    height: auto;
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: 0 5px 7px gray;
+}
+
+thead {
+    box-shadow: 0px 0px 10px gray;
+}
+  
+tr {
+    width: 100%;
+}
+th {
+    padding: 0.5rem 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    justify-content: center;
+}
+td {
+    padding: 0.5rem 0.5rem;
+    font-size: 16px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dee8f5;
+}
+
+.btnEditar {
+    background: #04c82e;
+    color: #FFFFFF;
+    border: 1px solid black;
+    width: 60px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnEditar:hover {
+    background: #FFFFFF;
+    color: var(--color-azul);
+    border-color: 1px solid var(--color-azul);
+}
+
+/*
+th, td {
+    text-align: center;
+    border: 1px solid var(--color-azul);
+    margin: 0.25rem;
+    padding: 0.25rem;
+}
+
+td > a {
+    color: #000000;
+
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/base/reset.css">
+    <link rel="stylesheet" href="/static/css/base/base.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/navLateral.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <link rel="stylesheet" href="/static/css/components/input-container.css">
+    <link rel="stylesheet" href="/static/css/bedel/nuevoAlumno.css">
+
+    <link rel="icon" href="/static/img/icono_logo.ico">
+
+    <script src="https://kit.fontawesome.com/99843bb491.js" crossorigin="anonymous"></script>
+    <title>Bedel - Añadir Alumno</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <div class="tituloISPP">
+                <p>I.S.P.P. N°1</p>  
+            </div>
+    
+            <div class="enlaces-header">
+                <label for="menu" class="enlace-item menuBurguer"><i class="fas fa-bars"></i></label>
+                <a class="enlace-item" href="/index.html"><i class="fa-solid fa-house"></i>INICIO</a>
+                <a class="enlace-item" href="/templates/login.html"><i class="fa-regular fa-circle-user"></i>CERRAR SESION</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <input id="menu" name="menu"  type="checkbox">
+            
+        <div class="nav-lateral">
+            <a href="">DATOS PERSONALES</a>
+            <a href="">DATOS LABORALES</a>
+            <a href="/templates/Alumno/modificarDatos.html">MODIFICAR DATOS</a>
+            <a href="/templates/bedel/nuevoAlumno.html">AÑADIR ALUMNO</a>
+            <a href="/templates/bedel/listadoAlumnos.html">LISTAR ALUMNOS</a>
+        </div>
+
+        <div class="nvoAl">
+            
+            <form class="form-nvoAlumno" id="form-nvoAlumno" action="" method="POST">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <legend>Nuevo Alumno</legend>
+                <div class="datosNvoAl">
+                    <div class="input-container">
+                        <label>Nombre</label>
+                        <input type="text" name="name" id="name" value="" maxlength="20" class="inputAl" data-prev-value="" required data-tipo="name">
+  
+                    </div>
+                    <div class="input-container">
+                        <label>Apellido</label>
+                        <input type="text" name="apellido" id="apellido" value=""  maxlength="11" class="inputAl" data-prev-value="" required data-tipo="apellido">
+         
+                    </div>
+                    <div class="input-container">
+                        <label>D.N.I.</label>
+                        <input type="text" name="dni" id="dni" value="" maxlength="11" class="inputAl" data-prev-value="" required data-tipo="dni">
+
+                    </div>
+                    <div class="input-container">
+                        <label>Carrera</label>
+                        <select>
+                            <option>Carrera 1</option>
+                            <option>Carrera 2</option>
+                        </select>
+   
+                    </div>
+
+                </div>
+
+                <div class="div-boton-guardar">
+                    <button class="btnGuardar" type="submit" title="guardarDatos" name="guardarDatos" id="btn3">GUARDAR</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+.nvoAl {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.form-nvoAlumno {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--color-azul);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.datosNvoAl {
+    display: flex;
+    flex-direction: column;
+}
+
+
+legend {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px;
+}
+
+.inputAl {
+    margin-left: 10px;
+    border-radius: 0.5rem;
+    cursor:context-menu;
+    border: 1px solid black;
+}
+
+
+.inputAl:active, .inputAl:focus, .inputAl:hover {
+    border-color: var(--color-azul);
+}
+
+.div-boton-guardar {
+    text-align: center;
+}
+
+.btnGuardar {
+    background: var(--color-azul);
+    color: #FFFFFF;
+    border: 1px solid black;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnGuardar:hover {
+    background: #FFFFFF;
+    color: var(--color-azul);
+    border-color: 1px solid var(--color-azul);
+}
+@media(max-width: 700px) {
+    .nvoAl {
+        width: 100%;
+        justify-content: center;
+    
+    }
+}
