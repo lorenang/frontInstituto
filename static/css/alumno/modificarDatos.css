@@ -86,6 +86,32 @@ select {
     border-color: 1px solid var(--color-azul);
 }
 
+
+.input-container--invalid {
+    margin-bottom: 0.5rem;
+}
+  
+.input-container--invalid .input {
+    border: 1px solid var(--warning-color);
+    border-radius: 7px;
+}
+  
+.input-container--invalid .input-label {
+    color: var(--warning-color);
+}
+  
+.input-message-error {
+    display: none;
+}
+  
+.input-container--invalid .input-message-error {
+    color: var(--warning-color);
+    display: block;
+    margin-top: 0.5rem;
+    padding-left: 0.5rem;
+}
+
+
 @media(max-width: 700px) {
     .editar-datos {
         width: 100%;

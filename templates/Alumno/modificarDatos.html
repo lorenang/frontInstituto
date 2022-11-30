@@ -55,12 +55,12 @@
                 <div class="input-container">
                     <label>C.U.I.L</label>
                     <input type="text" name="cuil" id="cuil" value="" readonly="readonly" maxlength="11" class="inputInfo" data-prev-value="{{info[0][0]}}" required data-tipo="cuil">
-                    
+                    <span class="input-message-error">Este campo no es valido</span>
                 </div>
                 <div class="input-container">
                     <label class="input-label" for="birth">Fecha de nacimiento</label>
                     <input name="birth" id="birth" class="inputInfo" type="date" placeholder="Fecha de nacimento" required data-tipo="nacimiento" data-prev-value="">
-                    
+                    <span class="input-message-error">Este campo no es valido</span>
                 </div>
                 <div class="input-container">
                     <label>Nacionalidad</label>
@@ -76,10 +76,12 @@
                 <div class="input-container">
                     <label for="email">E-mail</label>
                     <input type="email" id="email" name="email" class="inputInfo" id="email" value="" required data-tipo="email">
+                    <span class="input-message-error">Este campo no es valido</span>
                 </div>
                 <div class="input-container">
                     <label for="tel">Telefono</label>
                     <input type="tel" name="tel" value="" class="inputInfo" id="tel" required data-tipo="tel" data-prev-value="">
+                    <span class="input-message-error">Este campo no es valido</span>
                 </div>
             </div>
 
@@ -190,11 +192,13 @@
                 <div class="div-cont">
                     <div class="input-container">
                         <label for="contNueva">Contraseña Nueva</label>
-                        <input class="inputInfo" type="password" name="contNueva" id="contNueva" minlength="8" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."> 
+                        <input class="inputInfo" type="password" name="contNueva" id="contNueva" minlength="8" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales." data-tipo="password">
+                        <span class="input-message-error">Este campo no es valido</span> 
                     </div>
                     <div class="input-container">
                         <label for="confCont">Confirmar Contraseña</label>
-                        <input class="inputInfo"type="password" name="confCont" id="confCont"minlength="8" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.">
+                        <input class="inputInfo"type="password" name="confCont" id="confCont"minlength="8" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales." data-tipo="password">
+                        <span class="input-message-error">Este campo no es valido</span>
                     </div>
                 </div>    
             </div>
