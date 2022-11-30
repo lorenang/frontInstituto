@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
+    
+
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/navLateral.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <link rel="stylesheet" href="/static/css/alumno/datosPersonales.css">
+
+    <link rel="icon" href="/static/img/icono_logo.ico">
+
+    <script src="https://kit.fontawesome.com/99843bb491.js" crossorigin="anonymous"></script>
+
+    <title>Alumno - Inicio</title>
+
+</head>
+<body>
+    <header>
+ 
+        <nav class="nav">
+            <div class="tituloISPP">
+                <p>I.S.P.P. N°1</p>  
+            </div>
+    
+            <div class="enlaces-header">
+                <label for="menu" class="enlace-item menuBurguer"><i class="fas fa-bars"></i></label>
+                <a class="enlace-item" href="/index.html"><i class="fa-solid fa-house"></i>INICIO</a>
+                <a class="enlace-item" href="/Templates/login.html"><i class="fa-regular fa-circle-user"></i>CERRAR SESION</a>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <input id="menu" name="menu"  type="checkbox">
+            
+        <div class="nav-lateral">
+            <a href="./inicioAlumno.html">DATOS PERSONALES</a>
+            <a href="./inicioAlumno.html">DATOS PERSONALES</a>
+            <a href="./datosISPP.html">DATOS I.S.P.P. N°1</a>
+            <a href="./modificarDatos.html">MODIFICAR DATOS</a>
+            <a href="./inscripcionExam.html">INSCRIPCION A EXAMENES</a>
+        </div>
+
+        <div class="datosAlumno">
+            <div class="titulo">
+                <h2>Datos personales</h2>
+            </div>
+            
+            <div class="datosPersonales">
+
+                <div class="div-apellido">
+                    <dt id="datos_Personales-apellido-label">
+                        <label for="datos_Personales-apellido-label" class="optional">Apellido</label>
+                    </dt>
+                    <input type="text" name="form_datos_personales[apellido]" id="datos_Personales-apellido" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][1]}}">
+                </div>
+                
+                <div class="div-nombre">
+                    <dt id="datos_Personales-nombre-label">
+                        <label for="datos_Personales-nombre-label" class="optional">Nombre</label>
+                    </dt>
+                    <input type="text" name="form_datos_personales[nombre]" id="datos_Personales-nombre" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][2]}}">
+                </div>
+
+                <div class="div-dni">
+                    <dt id="datos_Personales-dni-label">
+                        <label for="datos_Personales-dni-label" class="optional">D.N.I.</label>
+                    </dt>
+                    <input type="text" name="form_datos_personales[dni]" id="datos_Personales-dni" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][0]}}">
+                </div>
+
+                <div class="div-cuil">
+                    <dt id="datos_Personales-cuil-label">
+                        <label for="datos_Personales-cuil-label" class="optional">C.U.I.L.</label>
+                    </dt>
+                    <input type="text" name="form_datos_personales[cuil]" id="datos_Personales-cuil" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][3]}}">
+                </div>
+
+                <div class="div-nacimiento">
+                    <dt id="datos_Personales-nacimiento-label">
+                        <label for="datos_Personales-nacimiento-label" class="optional">Fecha de Nacimiento</label>
+                    </dt>
+                    <input type="date" name="form_datos_personales[nacimiento]" id="datos_Personales-nacimiento" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][4]}}">
+                </div>
+                
+                <div class="div-nacionalidad">
+                    <dt id="datos_Personales-nacionalidad-label">
+                        <label for="datos_Personales-nacionalidad-label" class="optional">Nacionalidad</label>
+                    </dt>
+                    <input type="text" name="form_datos_personales[nacionalidad]" id="datos_Personales-nacionalidad" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][7]}}">
+                </div>
+            </div>
+          
+
+
+            <div class="titulo">
+                <h2>Datos de Contacto</h2>
+            </div>
+            <div class="datosContacto">
+                <div class="div-email">
+                    <dt id="datos_Contacto-email-label">
+                        <label for="datos_Contacto-email-label" class="optional">Correo Electronico</label>
+                    </dt>
+                    <input type="text" name="form_datos_contacto[email]" id="datos_Contacto-email" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][5]}}">
+                </div>
+          
+                <div class="div-telefono">
+                    <dt id="datos_Contacto-telefono-label">
+                        <label for="datos_Contacto-telefono-label" class="optional">Telefono</label>
+                    </dt>
+                    <input type="text" name="form_datos_contacto[telefono]" id="datos_Contacto-telefono" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][6]}}">
+                </div>
+            </div>
+        
+
+
+            <div class="titulo">
+                <h2>Domicilio de procedencia</h2>
+            </div>
+            <div class="datosDomicilioProcedencia">
+                <div class="div-provincia">
+                    <dt id="datos_DomicilioProcedencia-provincia-label">
+                        <label for="datos_DomicilioProcedencia-provincia-label" class="optional">Provincia</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[provincia]" id="datos_Domicilio-provincia" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][8]}}">
+                </div>
+          
+                <div class="div-departamento">
+                    <dt id="datos_DomicilioProcedencia-departamento-label">
+                        <label for="datos_DomicilioProcedencia-departamento-label" class="optional">Departamento</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[departamento]" id="datos_Domicilio-departamento" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][8]}}">
+                </div>
+          
+                <div class="div-localidad">
+                    <dt id="datos_DomicilioProcedencia-localidad-label">
+                        <label for="datos_DomicilioProcedencia-localidad-label" class="optional">Localidad</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[localidad]" id="datos_Domicilio-localidad" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][10]}}">
+                </div>
+          
+                <div class="div-barrio">
+                    <dt id="datos_DomicilioProcedencia-barrio-label">
+                        <label for="datos_DomicilioProcedencia-barrio-label" class="optional">Barrio</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[barrio]" id="datos_Domicilio-barrio" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][11]}}">
+                </div>
+                
+                <div class="div-calle">
+                    <dt id="datos_DomicilioProcedencia-calle-label">
+                        <label for="datos_DomicilioProcedencia-calle-label" class="optional">Calle</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[calle]" id="datos_Domicilio-calle" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][12]}}">
+                </div>
+          
+                <div class="div-altura">
+                    <dt id="datos_DomicilioProcedencia-altura-label">
+                        <label for="datos_DomicilioProcedencia-altura-label" class="optional">Altura</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[altura]" id="datos_Domicilio-altura" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][13]}}">
+                </div>
+
+                <div class="div-Manzana">
+                    <dt id="datos_DomicilioProcedencia-Manzana-label">
+                        <label for="datos_DomicilioProcedencia-Manzana-label" class="optional">Manzana</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[manzana]" id="datos_Domicilio-manzana" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][15]}}">
+                </div>
+
+                <div class="div-Lote">
+                    <dt id="datos_DomicilioProcedencia-Lote-label">
+                        <label for="datos_DomicilioProcedencia-Lote-label" class="optional">Lote</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[lote]" id="datos_Domicilio-lote" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][15]}}">
+                </div>
+          
+                <div class="div-pisoEdif">
+                    <dt id="datos_DomicilioProcedencia-pisoEdif-label">
+                      <label for="datos_DomicilioProcedencia-pisoEdif-label" class="optional">Piso</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[pisoEdif]" id="datos_Domicilio-pisoEdif" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][14]}}">
+                </div>
+                
+                <div class="div-numDpto">
+                    <dt id="datos_DomicilioProcedencia-numDpto-label">
+                        <label for="datos_DomicilioProcedencia-numDpto-label" class="optional">N° Departamento</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[numDpto]" id="datos_Domicilio-numDpto" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][15]}}">
+                </div>
+          
+            </div>
+          
+
+
+            <div class="titulo">
+                <h2>Domicilio durante el cursado</h2>
+            </div>
+            <div class="datosDomicilioCur">
+                <div class="div-provincia">
+                    <dt id="datos_DomicilioCursado-provincia-label">
+                        <label for="datos_DomicilioCursado-provincia-label" class="optional">Provincia</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilioCursado[provincia]" id="datos_Domicilio-provincia" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][16]}}">
+                </div>
+          
+                <div class="div-departamento">
+                    <dt id="datos_DomicilioCursado-departamento-label">
+                        <label for="datos_DomicilioCursado-departamento-label" class="optional">Departamento</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilioCursado[departamento]" id="datos_Domicilio-departamento" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][17]}}">
+                </div>
+          
+                <div class="div-localidad">
+                    <dt id="datos_DomicilioCursado-localidad-label">
+                        <label for="datos_DomicilioCursado-localidad-label" class="optional">Localidad</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilioCursado[localidad]" id="datos_Domicilio-localidad" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][18]}}">
+                </div>
+          
+                <div class="div-barrio">
+                    <dt id="datos_DomicilioCursado-barrio-label">
+                        <label for="datos_DomicilioCursado-barrio-label" class="optional">Barrio</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[barrio]" id="datos_Domicilio-barrio" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][19]}}">
+                </div>
+
+                <div class="div-calle">
+                    <dt id="datos_DomicilioCursado-calle-label">
+                        <label for="datos_DomicilioCursado-calle-label" class="optional">Calle</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilioCursado[calle]" id="datos_Domicilio-calle" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][20]}}">
+                </div>
+
+                <div class="div-altura">
+                    <dt id="datos_DomicilioCursado-altura-label">
+                        <label for="datos_DomicilioCursado-altura-label" class="optional">Altura</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilioCursado[altura]" id="datos_Domicilio-altura" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][21]}}">
+                </div>
+
+                <div class="div-Manzana">
+                    <dt id="datos_DomicilioCursado-Manzana-label">
+                        <label for="datos_DomicilioCursado-Manzana-label" class="optional">Manzana</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilioCursado[manzana]" id="datos_Domicilio-manzana" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][15]}}">
+                </div>
+
+                <div class="div-Lote">
+                    <dt id="datos_DomicilioCursado-Lote-label">
+                        <label for="datos_DomicilioCursado-Lote-label" class="optional">Lote</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilioCursado[lote]" id="datos_Domicilio-lote" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][15]}}">
+                </div>
+
+                <div class="div-pisoEdif">
+                    <dt id="datos_DomicilioCursado-pisoEdif-label">
+                        <label for="datos_DomicilioCursado-pisoEdif-label" class="optional">Piso</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[pisoEdif]" id="datos_Domicilio-pisoEdif" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][22]}}">
+                </div>
+
+                <div class="div-numDpto">
+                    <dt id="datos_DomicilioCursado-numDpto-label">
+                        <label for="datos_DomicilioCursado-numDpto-label" class="optional">N° Departamento</label>
+                    </dt>
+                    <input type="text" name="form_datos_domicilio[numDpto]" id="datos_Domicilio-numDpto" value="" readonly="readonly" maxlength="60" class="js-editable" data-prev-value="{{info[0][23]}}">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

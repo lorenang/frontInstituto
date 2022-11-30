@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/navLateral.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <link rel="stylesheet" href="/static/css/alumno/modificarDatos.css">
+
+    <link rel="icon" href="/static/img/icono_logo.ico">
+
+    <script src="https://kit.fontawesome.com/99843bb491.js" crossorigin="anonymous"></script>
+    <title>Alumno - Editar</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="tituloISPP">
+            <p>I.S.P.P. N°1</p>  
+        </div>
+
+        <div class="enlaces-header">
+            <label for="menu" class="enlace-item menuBurguer"><i class="fas fa-bars"></i></label>
+            <a class="enlace-item" href="/index.html"><i class="fa-solid fa-house"></i>INICIO</a>
+            <a class="enlace-item" href="/Templates/login.html"><i class="fa-regular fa-circle-user"></i>CERRAR SESION</a>
+            
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <input id="menu" name="menu"  type="checkbox">
+        
+    <div class="nav-lateral">
+        <a href="./inicioAlumno.html">DATOS PERSONALES</a>
+        <a href="./inicioAlumno.html">DATOS PERSONALES</a>
+        <a href="./datosISPP.html">DATOS I.S.P.P. N°1</a>
+        <a href="./modificarDatos.html">MODIFICAR DATOS</a>
+        <a href="./inscripcionExam.html">INSCRIPCION A EXAMENES</a>
+    </div>
+
+    <div class="editar-datos">
+        <h2>Editar datos</h2>
+        <form class="form-datos" id="form-datos" action="" method="POST"> 
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <legend>Informacion Personal</legend>
+            <div class="infoPersonal">
+                <div class="input-container">
+                    <label>C.U.I.L</label>
+                    <input type="text" name="cuil" id="cuil" value="" readonly="readonly" maxlength="11" class="inputInfo" data-prev-value="{{info[0][0]}}" required data-tipo="cuil">
+                    
+                </div>
+                <div class="input-container">
+                    <label class="input-label" for="birth">Fecha de nacimiento</label>
+                    <input name="birth" id="birth" class="inputInfo" type="date" placeholder="Fecha de nacimento" required data-tipo="nacimiento" data-prev-value="">
+                    
+                </div>
+                <div class="input-container">
+                    <label>Nacionalidad</label>
+                    <select id="nac" name="nac" value="">
+                        <option value="Argentina">Argentina</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                </div>
+            </div>
+
+            <legend>Informacion de Contacto</legend>
+            <div class="infoContacto">
+                <div class="input-container">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" class="inputInfo" id="email" value="" required data-tipo="email">
+                </div>
+                <div class="input-container">
+                    <label for="tel">Telefono</label>
+                    <input type="tel" name="tel" value="" class="inputInfo" id="tel" required data-tipo="tel" data-prev-value="">
+                </div>
+            </div>
+
+            <legend>Informacion de Domicilio</legend>
+            <div class="infoDomicilio">
+                <h3 class="titulo">Domicilio durante el Cursado</h3>
+
+                <div class="div-DomActual">
+                    <div class="input-container">
+                        <label for="provCurs">Provincia</label>
+                        <input name="provCurs" id="provCurs" type="text" value="" class="inputInfo" required>
+                    </div>
+
+                    <div class="input-container">
+                        <label for="dptoCurs">Departamento</label>
+                        <input name="dptoCurs" id="dptoCurs" type="text" value="" class="inputInfo" required>
+                    </div>
+                    
+                    <div class="input-container">
+                        <label for="localidadCurs">Localidad</label>
+                        <input name="localidadCurs" id="localidadCurs" type="text" value="" class="inputInfo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="barrioCurs">Barrio</label>
+                        <input name="barrioCurs" id="barrioCurs" type="text" value="" class="inputInfo" required> 
+                    </div>
+                    <div class="input-container">
+                        <label for="calleCurs">Calle</label>
+                        <input name="calleCurs" id="calleCurs" type="text" value="" class="inputInfo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="alturaCurs">Altura</label>
+                        <input name="alturaCurs" id="alturaCurs" type="text" value="" class="inputInfo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="manzanaCurs">Manzana</label>
+                        <input name="manzanafCurs" id="manzanaCurs" type="text" value="" class="inputInfo">
+                    </div>
+                    <div class="input-container">
+                        <label for="numDptoCurs">Lote</label>
+                        <input name="numDptoCurs" id="numDptoCurs" type="text" value="" class="inputInfo">
+                    </div>
+                    <div class="input-container">
+                        <label for="pisoEdifCurs">Piso</label>
+                        <input name="pisoEdifCurs" id="pisoEdifCurs" type="text" value="" class="inputInfo">
+                    </div>
+                    <div class="input-container">
+                        <label for="numDptoCurs">Numero de Departamento</label>
+                        <input name="numDptoCurs" id="numDptoCurs" type="text" value="" class="inputInfo">
+                    </div>
+                </div> 
+
+                <h3 class="titulo">Domicilio de Procedencia</h3>
+                <div class="div-domProc">
+                    <div class="input-container">
+                        <label for="provProc">Provincia</label>
+                        <input name="provProc" id="provProc" type="text" value="" class="inputInfo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="dptoProc">Departamento</label>
+                        <input name="dptoProc" id="dptoProc" type="text" value="" class="inputInfo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="localidadProc">Localidad</label>
+                        <input name="localidadProc" id="localidadProc" type="text" value="" class="inputInfo" required>
+                    </div>
+                    
+                    <div class="input-container">
+                        <label for="barrioProc">Barrio</label>
+                        <input name="barrioProc" id="barrioProc" type="text" value="" class="inputInfo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="calleProc">Calle</label>
+                        <input name="calleProc" id="calleProc" type="text" value="" class="inputInfo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="alturaProc">Altura</label>
+                        <input name="alturaProc" id="alturaProc" type="text" value="" class="inputInfo" required>
+                    </div>
+                    <div class="input-container">
+                        <label for="manzanaProc">Manzana</label>
+                        <input name="manzanaProc" id="manzanaProc" type="text" value="" class="inputInfo">
+                    </div>
+                    <div class="input-container">
+                        <label for="loteProc">Lote</label>
+                        <input name="loteProc" id="loteProc" type="text" value="" class="inputInfo">
+                    </div>
+                    <div class="input-container">
+                        <label for="pisoEdifProc">Numero de Piso de Edificio</label>
+                        <input name="pisoEdifProc" id="pisoEdifProc" type="text" value="" class="inputInfo">
+                    </div>
+                    <div class="input-container">
+                        <label for="numDptoProc">Numero de Departamento</label>
+                        <input name="numDptoProc" id="numDptoProc" type="text" value="" class="inputInfo" >
+                    </div>
+                </div>
+            </div>
+
+            <legend>Contraseña</legend>
+            <div class="modPass">
+                <div class="div-info">
+                    <p><i class="fa-solid fa-circle-info"></i> Su contraseña no puede ser informacion personal</p>
+                    <p><i class="fa-solid fa-circle-info"></i> Su contraseña debe contener 6 caracteres al menos</p>
+                    <p><i class="fa-solid fa-circle-info"></i> Su contraseña no puede ser enteramente numerica</p>
+                    <p><i class="fa-solid fa-circle-info"></i> Su contraseña debe contener letras mayuscula y minuscula, numeros y, al menos un caracter especial</p>
+                </div>
+
+                <div class="div-cont">
+                    <div class="input-container">
+                        <label for="contNueva">Contraseña Nueva</label>
+                        <input class="inputInfo" type="password" name="contNueva" id="contNueva" minlength="8" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales."> 
+                    </div>
+                    <div class="input-container">
+                        <label for="confCont">Confirmar Contraseña</label>
+                        <input class="inputInfo"type="password" name="confCont" id="confCont"minlength="8" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, un número y no puede contener caracteres especiales.">
+                    </div>
+                </div>    
+            </div>
+            <div class="div-boton-guardar">
+                <button class="btnGuardar" type="submit" title="guardarDatos" name="guardarDatos" id="btn3">GUARDAR</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border: 1px solid black;
+    align-items: center;
+}
+
+.enlaces-header {
+    display: flex;
+    justify-content: flex-end;
+}
+.tituloISPP {
+    font-size: 22px;
+    margin: 10px;
+}
+.enlaces-header {
+    margin: 10px;
+    font-size: 18px;
+    align-items: center;
+}
+.enlace-item {
+    margin: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+@media(max-width: 700px) {
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid black;
+    }
+}

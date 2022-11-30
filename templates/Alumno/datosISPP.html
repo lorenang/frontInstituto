@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/navLateral.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <link rel="stylesheet" href="/static/css/alumno/datosISPP.css">
+
+    <link rel="icon" href="/static/img/icono_logo.ico">
+
+    <script src="https://kit.fontawesome.com/99843bb491.js" crossorigin="anonymous"></script>
+    <title>Alumno - Datos I.S.P.P. N°1</title>
+</head>
+<body>
+    <header>
+ 
+        <nav class="nav">
+            <div class="tituloISPP">
+                <p>I.S.P.P. N°1</p>  
+            </div>
+    
+            <div class="enlaces-header">
+                <label for="menu" class="enlace-item menuBurguer"><i class="fas fa-bars"></i></label>
+                <a class="enlace-item" href="/index.html"><i class="fa-solid fa-house"></i>INICIO</a>
+                <a class="enlace-item" href="/Templates/login.html"><i class="fa-regular fa-circle-user"></i>CERRAR SESION</a>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <input id="menu" name="menu"  type="checkbox">
+            
+        <div class="nav-lateral">
+            <a href="./inicioAlumno.html">DATOS PERSONALES</a>
+            <a href="./inicioAlumno.html">DATOS PERSONALES</a>
+            <a href="./datosISPP.html">DATOS I.S.P.P. N°1</a>
+            <a href="./modificarDatos.html">MODIFICAR DATOS</a>
+            <a href="./inscripcionExam.html">INSCRIPCION A EXAMENES</a>
+        </div>
+
+        <div class="infoISPP">
+            <div class="tabla-info">
+                <h2>DATOS ACADEMICOS EN I.S.P.P. N°1</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Carrera</th>
+                            <th>Año de Ingreso</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--{% for carrera in carreras %}-->
+                        <td>Carrera 1</td>
+                        <td>2016</td>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="fichaMedica">
+                <dt class="dtSec">
+                    <h2>Ficha Medica</h2>
+                    <img class="thumbnail" width="100" src="uploads/{{alumno[5]}}" alt="">
+                <dt> <!--Foto titulo secundaria-->
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

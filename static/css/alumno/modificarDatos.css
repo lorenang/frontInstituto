@@ -1,0 +1,111 @@
+.editar-datos{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.editar-datos h2{
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.form-datos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid var(--color-azul);
+    border-radius: 10px;
+}
+.infoPersonal, .infoContacto, .infoDomicilio, .modPass  {
+    display: flex;
+    margin: 5px;
+
+}
+.infoDomicilio, .modPass {
+    flex-direction: column;
+}
+.infoDomicilio h3 {
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+legend {
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.div-DomActual, .div-domProc {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    padding: 5px;
+}
+.input-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px;
+    justify-content: space-around;
+}
+
+.inputInfo {
+    margin-left: 10px;
+    border-radius: 0.5rem;
+    cursor:context-menu;
+    border: 1px solid black;
+}
+
+
+.inputInfo:active, .inputInfo:focus, .inputInfo:hover {
+    border-color: var(--color-azul);
+}
+
+select {
+    margin-left: 10px;
+}
+
+.div-boton-guardar {
+    text-align: center;
+}
+
+.btnGuardar {
+    background: var(--color-azul);
+    color: #FFFFFF;
+    border: 1px solid black;
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btnGuardar:hover {
+    background: #FFFFFF;
+    color: var(--color-azul);
+    border-color: 1px solid var(--color-azul);
+}
+
+@media(max-width: 700px) {
+    .editar-datos {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .editar-datos h2 {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+    .infoPersonal, .infoContacto, .infoDomicilio, .modPass {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    legend {
+        font-size: 16px;
+    }
+    label {
+        font-size: 14px;
+    }
+}
+
+

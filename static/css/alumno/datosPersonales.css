@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.datosAlumno {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 75%;
+}
+
+.titulo h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.datosPersonales, .datosContacto, .datosDomicilioProcedencia, .datosDomicilioCur {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #505050;
+    border-radius: 10px;
+    box-shadow: 0.25rem #434343;
+}
+
+.datosPersonales > div, .datosContacto > div, .datosDomicilioProcedencia > div, .datosDomicilioCur > div {
+    margin: 5px;
+    padding: 5px;
+}
+
+dt > label {
+    font-size: 17px;
+}
+
+input {
+    margin: 3px;
+    padding: 3px;
+    border-radius: 0.5rem;
+    cursor: not-allowed;
+    border-color: #7a7a7a;
+}
+input:active, input:focus, input:hover {
+    border-color: var(--color-azul);
+}
+
+
+@media(max-width: 700px) {
+
+    .datosAlumno {
+        left: 5%;
+        right: 5%;
+        width: 100%;
+    }
+    .titulo h2{
+        font-size: 16px;
+        margin: 1rem 1rem 0.10rem 1rem;
+    }
+    .datosPersonales, .datosContacto, .datosDomicilioProcedencia, .datosDomicilioCur {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .datosPersonales > div, .datosContacto > div, .datosDomicilioProcedencia > div, .datosDomicilioCur > div {
+        margin: 0.15rem;
+        padding: 0.15rem;
+    }
+
+    dt > label {
+        font-size: 14px;
+    }
+    input {
+        margin: 0.10rem;
+        padding:  0.10rem;
+        cursor: not-allowed;
+    }
+
+
+}

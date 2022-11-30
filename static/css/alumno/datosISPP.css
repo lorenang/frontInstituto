@@ -1,0 +1,35 @@
+.infoISPP {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 5%;
+}
+.tabla-info h2, .fichaMedica h2{
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.fichaMedica {
+    padding-top: 10%;
+    margin-left: 40%;
+}
+table {
+    margin-left: 10%;
+    width: 60%;
+    height: auto;
+    border-collapse: separate;
+}
+tr {
+    width: 100%;
+}
+th {
+    font-size: 18px;
+    font-weight: bold;
+}
+td {
+    font-size: 16px;
+}
+th, td {
+    text-align: center;
+    border: 1px solid var(--color-azul)
+}

@@ -1,0 +1,54 @@
+.nav-lateral {
+    display: flex;
+    height: auto;
+    width: 20%;
+    flex-direction: column;
+    margin-right: 10px ;
+}
+
+.nav-lateral a {
+    margin: 1rem 0.5rem 1rem 0;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    border-bottom: 1px solid #000000;
+}
+
+.burguer {
+    display: flex;
+    position: relative;
+}
+.checkbox, .menuBurguer{
+    display: none;
+
+}
+input[type="checkbox"] {
+    opacity: 0;
+}
+
+@media(max-width: 700px) {
+    .menuBurguer{
+        display: block;
+    }
+    input[type="checkbox"]:not(checked) + div {
+        display: none;
+    }
+    input[type="checkbox"]:checked + div {
+        display: block;
+    }
+    .nav-lateral {
+        flex-direction: row;
+        margin-left: 5%;
+        margin-right:5%;
+        width: 95%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .nav-lateral a {
+        font-size: 14px;
+        border: 0;
+        text-decoration:underline;
+    }
+
+}

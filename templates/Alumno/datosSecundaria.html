@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/navLateral.css">
+    <link rel="stylesheet" href="/static/css/container.css">
+    <link rel="stylesheet" href="/static/css/alumno/datosSecundaria.css">
+
+    <link rel="icon" href="/static/img/icono_logo.ico">
+
+    <script src="https://kit.fontawesome.com/99843bb491.js" crossorigin="anonymous"></script>
+    <title>Alumno - Datos de Secundaria</title>
+</head>
+<body>
+    <header>
+ 
+        <nav class="nav">
+            <div class="tituloISPP">
+                <p>I.S.P.P. N°1</p>  
+            </div>
+    
+            <div class="enlaces-header">
+                <label for="menu" class="enlace-item menuBurguer"><i class="fas fa-bars"></i></label>
+                <a class="enlace-item" href="/index.html"><i class="fa-solid fa-house"></i>INICIO</a>
+                <a class="enlace-item" href="/Templates/login.html"><i class="fa-regular fa-circle-user"></i>CERRAR SESION</a>
+                
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <input id="menu" name="menu"  type="checkbox">
+            
+        <div class="nav-lateral">
+            <a href="./inicioAlumno.html">DATOS PERSONALES</a>
+            <a href="./inicioAlumno.html">DATOS PERSONALES</a>
+            <a href="./datosISPP.html">DATOS I.S.P.P. N°1</a>
+            <a href="./modificarDatos.html">MODIFICAR DATOS</a>
+            <a href="./inscripcionExam.html">INSCRIPCION A EXAMENES</a>
+        </div>
+
+        <div class="infoSecundaria">
+
+            <div class="datosSecundaria">
+
+                <div class="div-nombre_Secundaria">
+                    <dt id="datos_Secundaria-nombre_Secundaria-label">
+                        <label for="datos_Secundaria-nombre_Secundaria-label" class="optional">Nombre escuela Secundaria</label>
+                    </dt>
+                    <input type="text" name="form_datos_Secundaria[nombreSecundaria]" id="datos_Secundaria-nombre_Secundaria" value="" readonly="readonly" maxlength="60" class="js-editable inputSecundaria" data-prev-value="{{info[0][1]}}">
+                </div>
+    
+                <div class="div-egreso_Secundaria">
+                    <dt id="datos_Secundaria-egreso_Secundaria-label">
+                        <label for="datos_Secundaria-egreso_Secundaria-label" class="optional">Año de Egreso</label>
+                    </dt>
+                    <input type="text" name="form_datos_Secundaria[egresoSecundaria]" id="datos_Secundaria-egreso_Secundaria" value="" readonly="readonly" maxlength="60" class="js-editable inputSecundaria" data-prev-value="{{info[0][1]}}">
+                </div>
+    
+                <div class="div-modalidad_Secundaria">
+                    <dt id="datos_Secundaria-modalidad_Secundaria-label">
+                        <label for="datos_Secundaria-modalidad_Secundaria-label" class="optional">Modalidad</label>
+                    </dt>
+                    <input type="text" name="form_datos_Secundaria[modalidadSecundaria]" id="datos_Secundaria-modalidad_Secundaria" value="" readonly="readonly" maxlength="60" class="js-editable inputSecundaria" data-prev-value="{{info[0][1]}}">
+                </div>
+            </div>
+    
+            <div class="tituloSecundaria">
+                <dt>
+                    <label>Titulo Secundaria</label>
+                    <img class="thumbnail" width="100" src="uploads/{{alumno[5]}}" alt="">
+                <dt> <!--Foto titulo secundaria-->
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

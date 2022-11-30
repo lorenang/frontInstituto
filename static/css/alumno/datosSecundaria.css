@@ -1,0 +1,44 @@
+.infoSecundaria {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.datosSecundaria {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.div-nombre_Secundaria, .div-egreso_Secundaria, .div-modalidad_Secundaria, .tituloSecundaria {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: space-evenly;
+}
+
+dt > label {
+    font-size: 17px;
+}
+
+.inputSecundaria {
+    margin: 3px;
+    padding: 3px;
+    border-radius: 0.5rem;
+    cursor: not-allowed;
+    border-color: #7a7a7a;
+}
+
+.inputSecundaria:active, .inputSecundaria:focus, .inputSecundaria:hover {
+    border-color: var(--color-azul);
+}
+
+@media(max-width: 700px) {
+    .infoSecundaria {
+        flex-direction: row;
+    }
+    .div-nombre_Secundaria, .div-egreso_Secundaria, .div-modalidad_Secundaria, .tituloSecundaria {
+        align-items: center;
+        flex-direction: column;
+    }
+}
